@@ -11,3 +11,13 @@ def list_transactions():
         print(f.read())
         #lists all the entries in the list
 
+def ask_entry(): #Getting data from user and adding it to the list
+    day = input("Insert day: ") #treating this as text as data treatment is not intended at the moment
+    month = input("Insert month: ")
+    year = input("Insert year: ")
+    date = day + "/" + month + "/" + year
+    outgoing = input("What's the outgoing account? ")
+    incoming = input("What's the incoming account? ")
+    amount = input("How much is being transfered? ")
+    category = input("What category? ")
+    add_transaction(date, outgoing, incoming, amount, category)
