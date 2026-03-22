@@ -5,3 +5,8 @@ target-version = "py311"
 [tool.ruff.lint]
 select = ["E", "F", "I"]  # E: pycodestyle, F: pyflakes, I: isort (import sorting)
 ignore = ["E501"]         # Ignore line length errors (optional, e.g. if Black handles this)
+
+[tool.pytest.ini_options]
+pythonpath = [
+  ".", "src",
+]
