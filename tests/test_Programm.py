@@ -1,4 +1,3 @@
-import pytest
 import src.Programm                          
 
 def test_add_transaction():
