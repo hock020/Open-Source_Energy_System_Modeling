@@ -21,3 +21,20 @@ def ask_entry(): #Getting data from user and adding it to the list
     amount = input("How much is being transfered? ")
     category = input("What category? ")
     add_transaction(date, outgoing, incoming, amount, category)
+    
+def menu_selection():
+    print("What do you want to do? \n" \
+        "1 - add transaciton\n" \
+        "2 - list all transactions recorded \n" \
+        "other - quit")
+    choice = input("Selection: ")
+    if choice == '1':
+        ask_entry()
+        menu_selection()
+    elif choice == '2':
+        list_transactions()
+        menu_selection()
+    else:
+        print("Goodbye")
+        
+menu_selection()
